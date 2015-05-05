@@ -4,7 +4,7 @@
 require(sqldf)
 require (tcltk)
 
-# open a subset of the data 1st and the 2nd of February 2007: 
+# open a subset of the data for the 1st and the 2nd of February 2007: 
 
 data<-read.csv.sql( file="household_power_consumption.txt", 
                     sep=";", sql="select * from file where Date = '1/2/2007' or Date = '2/2/2007'", 
