@@ -4,7 +4,7 @@
 require(sqldf)
 require (tcltk)
 
-# open a subset of the data between the dates 
+# open a subset of the data for the 1st and the 2nd of February 2007: 
 
 data<-read.csv.sql( file="household_power_consumption.txt", 
                     sep=";", sql="select * from file where Date = '1/2/2007' or Date = '2/2/2007'", 
@@ -18,6 +18,7 @@ png(file="plot1.png")
 
 hist(data$Global_active_power, main="Global Active Power", 
      col = "red", bg= "white", xlab = "Global Active Power (kilowatts)")
+
 # close png device
 
 dev.off()
